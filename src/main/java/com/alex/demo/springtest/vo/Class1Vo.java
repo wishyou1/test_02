@@ -10,16 +10,16 @@ import java.io.Serializable;
 public class Class1Vo implements Serializable {
     private  static  final long serialVersionUID = 1L;
 
-    private Long classId;
+    private int classId;
 
     @ApiModelProperty(value = "班级名")
     private String className;
 
-    public Long getClassId() {
+    public int getClassId() {
         return classId;
     }
 
-    public void setClassId(Long classId) {
+    public void setClassId(int classId) {
         this.classId = classId;
     }
 

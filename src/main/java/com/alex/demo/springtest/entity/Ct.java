@@ -6,20 +6,19 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 
-@TableName("class")
-@ApiModel(value = "Class对象", description = "用户信息")
-public class Class1 extends Model<Class1> {
+@TableName("contect_ct")
+@ApiModel(value = "班级老师关联",description = "班级老师关联信息")
+public class Ct extends Model<Ct> {
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "class_id", type = IdType.AUTO)
+    @TableId(value = "class_id",type = IdType.AUTO)
     private int classId;
 
-    @ApiModelProperty(value = "班级名")
-    private String className;
+    @TableId(value = "teacher_id",type = IdType.AUTO)
+    private int teacherId;
 
     public int getClassId() {
         return classId;
@@ -29,25 +28,19 @@ public class Class1 extends Model<Class1> {
         this.classId = classId;
     }
 
-    public String getClassName() {
-        return className;
+    public int getTeacherId() {
+        return teacherId;
     }
 
-    public void setClassName(String className) {
-        this.className = className;
+    public void setTeacherId(int teacherId) {
+        this.teacherId = teacherId;
     }
-
-    @Override
-    public Serializable pkVal() {
-        return this.classId;
-    }
-
 
     @Override
     public String toString() {
-        return "Class{" +
+        return "Ct{" +
                 "classId=" + classId +
-                ", className='" + className + '\'' +
+                ", teacherId=" + teacherId +
                 '}';
     }
 }

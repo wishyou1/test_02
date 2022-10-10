@@ -28,3 +28,10 @@ create table 'class'(
     'class_name' char (100)
 );
 insert into 'class'('class_id','class_name') values ('3','三班');
+
+create table 'student'(
+                        'student_id' int (11),
+                        'student_name' char (100)
+);
+insert into 'student'('student_id','student_name') values ('14','蒯');
+
