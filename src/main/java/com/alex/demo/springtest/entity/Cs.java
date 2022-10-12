@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
+import io.swagger.annotations.ApiModelProperty;
 
 @TableName("contect_cs")
 public class Cs extends Model<Cs> {
@@ -12,7 +13,7 @@ public class Cs extends Model<Cs> {
     @TableId(value = "class_id",type = IdType.AUTO)
     private int classId;
 
-    @TableId(value = "student_id",type = IdType.AUTO)
+    @ApiModelProperty(value = "学生id")
     private int studentId;
 
     public int getClassId() {

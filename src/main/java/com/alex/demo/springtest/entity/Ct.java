@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 
@@ -17,7 +18,7 @@ public class Ct extends Model<Ct> {
     @TableId(value = "class_id",type = IdType.AUTO)
     private int classId;
 
-    @TableId(value = "teacher_id",type = IdType.AUTO)
+    @ApiModelProperty(value = "教师id")
     private int teacherId;
 
     public int getClassId() {

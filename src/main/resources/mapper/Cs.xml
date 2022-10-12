@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.alex.demo.springtest.mapper.CsMapper">
+
+    <resultMap id = "BaseResultMap"
+               type="com.alex.demo.springtest.entity.Cs">
+        <id column="class_id" property="classId"/>
+        <result column="student_id" property="studentid"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        class_id,student_id
+    </sql>
+
+    <select id="findByClassId" parameterType="java.lang.Integer"
+            resultType="com.alex.demo.springtest.entity.Cs">
+        select
+        <include refid="Base_Column_List"/>
+        from contect_cs
+        where class_id = #{classId}
+    </select>
+
+</mapper>
