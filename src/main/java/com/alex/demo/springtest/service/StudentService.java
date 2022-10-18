@@ -1,3 +1,4 @@
+/*
 package com.alex.demo.springtest.service;
 
 
@@ -26,3 +27,4 @@ public class StudentService extends ServiceImpl<StudentMapper, Student> {
         return baseMapper.findByStudentId(studentId);
     }
 }
+*/

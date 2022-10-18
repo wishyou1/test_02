@@ -35,3 +35,9 @@ create table 'student'(
 );
 insert into 'student'('student_id','student_name') values ('14','蒯');
 
+create table 'contect_cs'(
+                          'cs_id' int(11),
+                          'class_id' int(11),
+                          'student_id' int (11),
+);
+insert into 'contect_cs'('cs_id','class_id','student_id') values ('04','26','15') 

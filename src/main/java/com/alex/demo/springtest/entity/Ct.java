@@ -16,10 +16,21 @@ public class Ct extends Model<Ct> {
     private static final long serialVersionUID = 1L;
 
     @TableId(value = "class_id",type = IdType.AUTO)
+    private int ctId;
+
+    @ApiModelProperty(value = "班级id")
     private int classId;
 
     @ApiModelProperty(value = "教师id")
     private int teacherId;
+
+    public int getCtId() {
+        return ctId;
+    }
+
+    public void setCtId(int ctId) {
+        this.ctId = ctId;
+    }
 
     public int getClassId() {
         return classId;

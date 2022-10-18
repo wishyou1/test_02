@@ -9,10 +9,20 @@ import java.io.Serializable;
 public class CtVo implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    private int ctId;
+    @ApiModelProperty(value = "教室id")
     private int classId;
 
     @ApiModelProperty(value = "教师id")
     private int teacherId;
+
+    public int getCtId() {
+        return ctId;
+    }
+
+    public void setCtId(int ctId) {
+        this.ctId = ctId;
+    }
 
     public int getClassId() {
         return classId;

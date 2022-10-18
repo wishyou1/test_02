@@ -11,18 +11,20 @@ import org.springframework.stereotype.Service;
 @Service
 public class ClassAllService  extends ServiceImpl<CsMapper, Cs> {
 
-    public CsVo findcs(int classId){
-        Cs cs = this.findByClassAllId(classId);
-        if(cs.getClassId() == classId){
+/*
+    public CsVo findcs(int csId){
+        Cs cs = this.findByClassAllId(csId);
+        if(cs.getClassId() == csId){
             CsVo csVo = new CsVo();
             BeanUtils.copyProperties(cs,csVo);
             return csVo;
         }
         return null;
     }
+*/
 
-    private Cs findByClassAllId(int classId) {
-        return baseMapper.fingByClassAllId(classId);
-    }
+/*    private Cs findByClassAllId(int csId) {
+        return baseMapper.fingByClassAllId(csId);
+    }*/
 
 }

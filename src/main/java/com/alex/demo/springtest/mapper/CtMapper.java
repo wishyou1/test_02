@@ -5,5 +5,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 public interface CtMapper extends BaseMapper<Ct> {
 
-    Ct findByClassId(int classId);
+    Ct findByCtId(int ctId);
 }

@@ -1,4 +1,4 @@
-package com.alex.demo.springtest.controller;
+/*package com.alex.demo.springtest.controller;
 
 
 import com.alex.demo.springtest.service.ClassAllService;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-/*import java.util.logging.Logger;*/
+*//*import java.util.logging.Logger;*//*
 
 @RestController
 @RequestMapping("/classall")
@@ -27,10 +27,10 @@ public class ClassAllController {
     private Logger logger = LoggerFactory.getLogger(ClassAllController.class);
 
     @RequestMapping(value = "/findclass",method = RequestMethod.GET)
-    @ApiOperation(value = "班级所有信息查询",notes = "班级信息查询，传入参数：classid")
-    public CsVo getClassAll(int classid){
-        CsVo csVo = classAllService.findcs(classid);
-        StudentVo studentVo = studentService.findStudent(csVo.getStudentId());
+    @ApiOperation(value = "班级所有信息查询",notes = "班级信息查询，传入参数：csid")
+    public CsVo getClassAll(int csid){
+        CsVo csVo = classAllService.findcs(csid);
+ *//*       StudentVo studentVo = studentService.findStudent(csVo.getStudentId());*//*
         if(null != csVo){
             logger.debug("成功");
         }else{
@@ -38,4 +38,4 @@ public class ClassAllController {
         }
         return csVo;
     }
-}
+}*/

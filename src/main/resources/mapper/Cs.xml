@@ -4,19 +4,31 @@
 
     <resultMap id = "BaseResultMap"
                type="com.alex.demo.springtest.entity.Cs">
-        <id column="class_id" property="classId"/>
+        <id column="cs_id" property="csId"/>
+        <result column="class_id" property="classId"/>
         <result column="student_id" property="studentid"/>
+        <collection property="students" ofType="com.alex.demo.springtest.entity.Student">
+            <result column="student_id" property="studentId"/>
+            <result column="student_name" property="studentName"/>
+        </collection>
     </resultMap>
-    <sql id="Base_Column_List">
-        class_id,student_id
-    </sql>
+<!--    <sql id="Base_Column_List">
+        cs_id,class_id,student_id
+    </sql>-->
 
-    <select id="findByClassId" parameterType="java.lang.Integer"
+    <select id="getAll" parameterType="java.lang.Integer"
             resultType="com.alex.demo.springtest.entity.Cs">
-        select
+            SELECT b.class_id,c.student_id,c.student_name
+            FROM contect_cs a
+            INNER JOIN class b
+            INNER JOIN student c
+            ON a.class_id = b.class_id
+            AND a.student_id = c.student_id
+
+<!--        select
         <include refid="Base_Column_List"/>
         from contect_cs
-        where class_id = #{classId}
+        where cs_id = #{csId}-->
     </select>
 
 </mapper>

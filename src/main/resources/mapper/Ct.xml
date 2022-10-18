@@ -4,19 +4,20 @@
 
     <resultMap id = "BaseResultMap"
                type="com.alex.demo.springtest.entity.Ct">
-        <id column="class_id" property="classId"/>
+        <id column="ct_id" property="ctId"/>
+        <result column="class_id" property="classId"/>
         <result column="teacher_id" property="teacherid"/>
     </resultMap>
     <sql id="Base_Column_List">
-        class_id,teacher_id
+        ct_id,class_id,teacher_id
     </sql>
 
-    <select id="findByClassId" parameterType="java.lang.Integer"
+    <select id="findByCtId" parameterType="java.lang.Integer"
             resultType="com.alex.demo.springtest.entity.Ct">
         select
         <include refid="Base_Column_List"/>
         from contect_ct
-        where class_id = #{classId}
+        where ct_id = #{ctId}
     </select>
 
 </mapper>

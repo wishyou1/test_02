@@ -1,4 +1,4 @@
-package com.alex.demo.springtest.controller;
+/*package com.alex.demo.springtest.controller;
 
 
 import com.alex.demo.springtest.service.StudentService;
@@ -33,4 +33,4 @@ public class StudentController {
         }
         return studentVo;
     }
-}
+}*/

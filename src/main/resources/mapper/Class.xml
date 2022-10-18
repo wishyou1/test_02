@@ -2,21 +2,33 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.alex.demo.springtest.mapper.Class1Mapper">
 
-    <resultMap id = "BaseResultMap"
-        type="com.alex.demo.springtest.entity.Class1">
-        <id column="class_id" property="classId"/>
+<!--    <resultMap id = "BaseResultMap" type="com.alex.demo.springtest.entity.Class1">
+        <result property="classid" column="class_id"/>
         <result column="class_name" property="className"/>
-    </resultMap>
-    <sql id="Base_Column_List">
+        <collection property="students" ofType="com.alex.demo.springtest.entity.Student">
+        <id column="student_id" property="studentId"/>
+        <result column="student_name" property="studentName"/>
+        </collection>
+    </resultMap>-->
+ <!--   <sql id="Base_Column_List">
             class_id,class_name
-    </sql>
+    </sql>-->
 
-    <select id="findByClassId" parameterType="java.lang.Integer"
+<!--    <select id="findByClassId" parameterType="java.lang.Integer"
         resultType="com.alex.demo.springtest.entity.Class1">
         select
             <include refid="Base_Column_List"/>
         from class
         where class_id = #{classId}
+    </select>-->
+    <select id="findStudentById" parameterType="java.lang.Integer"
+            resultType="com.alex.demo.springtest.entity.Class1">
+        SELECT b.class_id,c.student_id,c.student_name
+        FROM contect_cs a
+        INNER JOIN class b
+        INNER JOIN student c
+        ON a.class_id = b.class_id
+        AND a.student_id = c.student_id
+        WHERE b.class_id = #{classid};
     </select>
-
 </mapper>
