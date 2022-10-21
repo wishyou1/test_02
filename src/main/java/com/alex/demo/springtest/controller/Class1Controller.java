@@ -24,7 +24,7 @@ public class Class1Controller {
 
     @RequestMapping(value = "/find", method = RequestMethod.GET)
     @ApiOperation(value = "班级信息查询", notes = "班级查询,传入参数：classid")
- /*   public Class1Vo getClass(int classid){
+    public Class1Vo getClass(int classid){
 
         Class1Vo class1Vo = class1Service.find1(classid);
         if(null != class1Vo){
@@ -33,8 +33,8 @@ public class Class1Controller {
             logger.debug("失败");
         }
         return class1Vo;
-    }*/
-    public String findStudent(@PathVariable("classid") int id){
-        return JSON.toJSONString(class1Service.findStudentByid(id));
     }
+/*    public String findStudent(@PathVariable("classid") int id){
+        return JSON.toJSONString(class1Service.findStudentByid(id));
+    }*/
 }

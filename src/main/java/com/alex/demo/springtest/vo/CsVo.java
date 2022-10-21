@@ -5,7 +5,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
-import java.util.List;
 
 @ApiModel(value = "班级中学生",description = "班级中学生id")
 public class CsVo implements Serializable {
@@ -16,8 +15,7 @@ public class CsVo implements Serializable {
     private int classId;
 
     @ApiModelProperty(value = "学生id")
-/*    private int studentId;*/
-    private List<StudentVo> studentVos;
+    private int studentId;
 
     public int getCsId() {
         return csId;
@@ -35,19 +33,21 @@ public class CsVo implements Serializable {
         this.classId = classId;
     }
 
-/*    public int getStudentId() {
+    public int getStudentId() {
         return studentId;
     }
 
     public void setStudentId(int studentId) {
         this.studentId = studentId;
-    }*/
-
-    public List<StudentVo> getStudentVos() {
-        return studentVos;
     }
 
-    public void setStudentVos(List<StudentVo> studentVos) {
-        this.studentVos = studentVos;
+
+
+    @Override
+    public String toString() {
+        return "CsVo{" +
+                ", classId=" + classId +
+                ", studentId=" + studentId +
+                '}';
     }
 }

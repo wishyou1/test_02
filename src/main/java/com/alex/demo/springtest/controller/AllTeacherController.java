@@ -21,10 +21,10 @@ public class AllTeacherController {
     private AllTeacherService allTeacherService;
     private Logger logger = LoggerFactory.getLogger(AllTeacherController.class);
 
-    @RequestMapping(value = "/find",method = RequestMethod.GET)
+    @RequestMapping(value = "/findt",method = RequestMethod.GET)
     @ApiOperation(value = "教师信息",notes = "教师信息，传入参数：ctid")
-    public CtVo getAllTeacher(int ctid){
-        CtVo ctVo = allTeacherService.findT(ctid);
+    public CtVo getAllTeacher(int classId){
+        CtVo ctVo = allTeacherService.findT(classId);
         if(null != ctVo){
             logger.debug("成功");
         }else{

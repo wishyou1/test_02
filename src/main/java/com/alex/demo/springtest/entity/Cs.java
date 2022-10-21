@@ -12,21 +12,21 @@ import java.util.List;
 public class Cs extends Model<Cs> {
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "class_id",type = IdType.AUTO)
-    private  int csid;
+    @TableId(value = "cs_id",type = IdType.AUTO)
+    private  int csId;
 
     @ApiModelProperty(value = "班级id")
     private int classId;
 
     @ApiModelProperty(value = "学生")
-/*    private int studentId;*/
-    private List<Student> students;
+    private int studentId;
+/*    private List<Student> students;*/
     public int getId() {
-        return csid;
+        return csId;
     }
 
     public void setId(int id) {
-        this.csid = id;
+        this.csId = id;
     }
 
     public int getClassId() {
@@ -37,12 +37,20 @@ public class Cs extends Model<Cs> {
         this.classId = classId;
     }
 
-    /*public int getStudentId() {
+    public int getStudentId() {
         return studentId;
     }
 
     public void setStudentId(int studentId) {
         this.studentId = studentId;
+    }
+
+    public int getCsId() {
+        return csId;
+    }
+
+    public void setCsId(int csid) {
+        this.csId = csid;
     }
 
     @Override
@@ -51,30 +59,22 @@ public class Cs extends Model<Cs> {
                 "classId=" + classId +
                 ", studentId=" + studentId +
                 '}';
-    }*/
-
-    public int getCsid() {
-        return csid;
     }
 
-    public void setCsid(int csid) {
-        this.csid = csid;
-    }
-
-    public List<Student> getStudents() {
+/*    public List<Student> getStudents() {
         return students;
     }
 
     public void setStudents(List<Student> students) {
         this.students = students;
-    }
+    }*/
 
-    @Override
+/*    @Override
     public String toString() {
         return "Cs{" +
                 "csid=" + csid +
                 ", classId=" + classId +
                 ", students=" + students +
                 '}';
-    }
+    }*/
 }

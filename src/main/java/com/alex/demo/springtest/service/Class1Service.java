@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.io.Serializable;
 
 @Service
-/*public class Class1Service extends ServiceImpl<Class1Mapper,Class1> {
+public class Class1Service extends ServiceImpl<Class1Mapper,Class1> {
 
     public Class1Vo find1(int classId){
         Class1 class1 = this.findByClassId(classId);
@@ -22,22 +22,18 @@ import java.io.Serializable;
             return class1Vo;
         }
         return null;
-    }*/
-/*
-    public Class findByClassName(String className){
-        return baseMapper.findByClassName(className);
     }
-*/
 
-/*    public Class1 findByClassId(int classId){
-
+   public Class1 findByClassId(int classId){
         return baseMapper.findByClassId(classId);
     }
-    }*/
+    }
+/*
 public class Class1Service extends ServiceImpl<Class1Mapper,Class1> implements Class1ServiceImpl{
     @Override
     public Cs findStudentByid(Serializable id) {
         return getBaseMapper().findStudentById(id);
     }
-}
+*/
+
 

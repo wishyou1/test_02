@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
+import java.util.List;
 
 @TableName("contect_ct")
 @ApiModel(value = "班级老师关联",description = "班级老师关联信息")
@@ -24,6 +25,7 @@ public class Ct extends Model<Ct> {
     @ApiModelProperty(value = "教师id")
     private int teacherId;
 
+    private List<Teacher> teachers;
     public int getCtId() {
         return ctId;
     }

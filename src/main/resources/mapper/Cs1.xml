@@ -2,11 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.alex.demo.springtest.mapper.Cs1Mapper">
 
-    <resultMap id = "BaseResultMap" type="com.alex.demo.springtest.entity.Cs">
+<!--    <resultMap id = "BaseResultMap" type="com.alex.demo.springtest.entity.Cs">
         <id column="cs_id" property="csId"/>
         <result column="class_id" property="classId"/>
         <result column="student_id" property="studentid"/>
-    </resultMap>
+    </resultMap>-->
 <!--    <sql id="Base_Column_List">
         cs_id,class_id,student_id
     </sql>
@@ -18,7 +18,7 @@
         from contect_cs
         where cs_id = #{csId}
     </select>-->
-    <select id="findByCsId" parameterType="java.lang.Integer"
+ <!--   <select id="findByCsId" parameterType="java.lang.Integer"
             resultType="com.alex.demo.springtest.entity.Cs">
         SELECT b.class_id,c.student_id,c.student_name
         FROM contect_cs a
@@ -27,5 +27,5 @@
         ON a.class_id = b.class_id
         AND a.student_id = c.student_id
         WHERE b.class_id = #{id};
-    </select>
+    </select>-->
 </mapper>
