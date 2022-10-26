@@ -11,7 +11,7 @@
         teacher_id,teacher_name
     </sql>
 
-    <select id="findByClassId" parameterType="java.lang.Integer"
+    <select id="findByTeacherId" parameterType="java.lang.Integer"
             resultType="com.alex.demo.springtest.entity.Teacher">
         select
         <include refid="Base_Column_List"/>

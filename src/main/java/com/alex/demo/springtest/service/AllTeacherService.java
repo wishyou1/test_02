@@ -23,8 +23,8 @@ public class AllTeacherService extends ServiceImpl<CtMapper, Ct> {
 
     public CtVo findT(int classId){
         Ct ct = ctMapper.getAllTeacher(classId);
-        for (int i = 0; i < classId; i++) {
-            List a = (List) teacherMapper.findByTeacherId(ct.getTeacherId());
+        for (int i = 21; i < classId; i++) {
+            teacherMapper.findByTeacherId(ct.getTeacherId());
             if(ct.getClassId() == classId){
                 CtVo ctVo = new CtVo();
                 BeanUtils.copyProperties(ct,ctVo);

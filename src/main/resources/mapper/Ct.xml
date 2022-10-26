@@ -6,7 +6,7 @@
                type="com.alex.demo.springtest.entity.Ct">
         <id column="ct_id" property="ctId"/>
         <result column="class_id" property="classId"/>
-        <result column="teacher_id" property="teacherid"/>
+        <result column="teacher_id" property="teacherId"/>
     </resultMap>
     <sql id="Base_Column_List">
         ct_id,class_id,teacher_id
