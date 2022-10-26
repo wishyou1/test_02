@@ -6,10 +6,10 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import io.swagger.annotations.ApiModelProperty;
 
-import java.util.List;
 
 @TableName("contect_cs")
 public class Cs extends Model<Cs> {
+
     private static final long serialVersionUID = 1L;
 
     @TableId(value = "cs_id",type = IdType.AUTO)
@@ -20,13 +20,14 @@ public class Cs extends Model<Cs> {
 
     @ApiModelProperty(value = "学生")
     private int studentId;
-/*    private List<Student> students;*/
-    public int getId() {
+
+
+    public int getCsId() {
         return csId;
     }
 
-    public void setId(int id) {
-        this.csId = id;
+    public void setCsId(int csId) {
+        this.csId = csId;
     }
 
     public int getClassId() {
@@ -45,36 +46,12 @@ public class Cs extends Model<Cs> {
         this.studentId = studentId;
     }
 
-    public int getCsId() {
-        return csId;
-    }
-
-    public void setCsId(int csid) {
-        this.csId = csid;
-    }
-
     @Override
     public String toString() {
         return "Cs{" +
-                "classId=" + classId +
+                "csId=" + csId +
+                ", classId=" + classId +
                 ", studentId=" + studentId +
                 '}';
     }
-
-/*    public List<Student> getStudents() {
-        return students;
-    }
-
-    public void setStudents(List<Student> students) {
-        this.students = students;
-    }*/
-
-/*    @Override
-    public String toString() {
-        return "Cs{" +
-                "csid=" + csid +
-                ", classId=" + classId +
-                ", students=" + students +
-                '}';
-    }*/
 }

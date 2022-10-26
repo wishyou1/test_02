@@ -7,8 +7,6 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
-import java.io.Serializable;
 import java.util.List;
 
 @TableName("contect_ct")
@@ -16,7 +14,7 @@ import java.util.List;
 public class Ct extends Model<Ct> {
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "class_id",type = IdType.AUTO)
+    @TableId(value = "ct_id",type = IdType.AUTO)
     private int ctId;
 
     @ApiModelProperty(value = "班级id")
@@ -26,6 +24,7 @@ public class Ct extends Model<Ct> {
     private int teacherId;
 
     private List<Teacher> teachers;
+
     public int getCtId() {
         return ctId;
     }
@@ -53,7 +52,8 @@ public class Ct extends Model<Ct> {
     @Override
     public String toString() {
         return "Ct{" +
-                "classId=" + classId +
+                "ctId=" + ctId +
+                ", classId=" + classId +
                 ", teacherId=" + teacherId +
                 '}';
     }

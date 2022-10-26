@@ -20,4 +20,9 @@
         where ct_id = #{ctId}
     </select>
 
+    <select id="getAllTeacher" resultMap="BaseResultMap">
+        select c.*
+        from contect_ct c
+        where c.class_id = #{classId}
+    </select>
 </mapper>
